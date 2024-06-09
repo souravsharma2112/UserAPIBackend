@@ -5,9 +5,11 @@ const app = express();
 const router = require("./router/auth-router")
 const connectDB = require("./utils/db");
 const errorMiddleware = require("./middleware/error-middleware");
+// const clientURL = "http://localhost:5173/"
+const clientURL = "https://usermsapi.netlify.app/"
 
 const corsOptions = {
-    origin: process.env.BASE_URL,
+    origin: clientURL,
     methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE'],
     credentials: true,
 };
