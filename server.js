@@ -9,7 +9,7 @@ const errorMiddleware = require("./middleware/error-middleware");
 // const clientURL = "https://usermsapi.netlify.app"
 
 const corsOptions = {
-    origin: "https://usermsapi.netlify.app",
+    origin: "https://usermsapi.netlify.app/",
     methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE'],
     credentials: true,
 };
