@@ -47,7 +47,7 @@ const Register = async (req, res) => {
         const userExist = await User.findOne({ email })
 
         if (userExist) {
-            return res.status(400).json({ msg: "email Exist" })
+            return res.status(400).json({ msg: "Email Exist Already" })
         }
 
         const saltRound = 10;

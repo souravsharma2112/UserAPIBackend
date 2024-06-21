@@ -6,13 +6,22 @@ const router = require("./router/auth-router")
 const connectDB = require("./utils/db");
 const errorMiddleware = require("./middleware/error-middleware");
 // const clientURL = "http://localhost:5173/"
-// const clientURL = "https://usermsapi.netlify.app"
+// const clientURL = "https://usermsapi.netlify.app/"
 
+// for production
 const corsOptions = {
-    origin: "https://usermsapi.netlify.app/",
+    origin: "https://usermsapi.netlify.app",
     methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE'],
     credentials: true,
 };
+
+// for development
+
+// const corsOptions = {
+//     origin: "http://localhost:5173",
+//     methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE'],
+//     credentials: true,
+// };
 
 // Use CORS middleware
 app.use(cors(corsOptions));
