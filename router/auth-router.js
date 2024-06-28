@@ -9,6 +9,8 @@ const authMiddleware = require("../middleware/authMiddleware")
 router.route("/").get(authController.Home)
 router.route("/register").post(validate(signupSchema) ,authController.Register)
 router.route("/login").post(validate(loginSchema) , authController.Login)
+router.route("/update").patch( authController.UpdateUserData)
+router.route("/passupdate").patch( authController.UpdateUserPass)
 
 router.route("/user").get(authMiddleware ,authController.UserData)
 
